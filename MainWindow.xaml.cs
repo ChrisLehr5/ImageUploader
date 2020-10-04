@@ -41,8 +41,7 @@ namespace WpfApp1
             SaveControlImage(grdText, filename);
             MessageBox.Show("Done");
 
-        }
-        // Save a control's image.
+        }       
         // Save a control's image.
         private void SaveControlImage(FrameworkElement control,
             string filename)
@@ -82,7 +81,8 @@ namespace WpfApp1
             //  }
 
             // Save the file.           
-            FileStream fileObj = new FileStream(@"C:\\Users\\Khyr\\Source\\Repos\\WpfApp1\\Images\\" + filename, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
+            //FileStream fileObj = new FileStream(@"C:\\Users\\Khyr\\Source\\Repos\\WpfApp1\\Images\\" + filename, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
+            FileStream fileObj = new FileStream(@"C:\\Users\\Khyr\\Desktop\\" + filename, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
 
             {
                 encoder.Save(fileObj);
